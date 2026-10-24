@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'm7.dart';
 import 'm8.dart';
+import 'm9.dart';
 
 void main() {
   // 支持 ?d=3.1.1 直达指定演示页（截图、逐字稿嵌链接都靠它）
@@ -83,6 +84,7 @@ class _DemoHomeState extends State<DemoHome> {
     Demo('EX5', '🔥 朋友圈卡片', 'Container 卡片 + Wrap 九宫格图 + Text.rich 点赞列表', _ex5Moments),
     ...m7Demos, // 第7课：可滚动组件与多页面结构（6.x + 2.4 路由 + EX6~EX10）
     ...m8Demos, // 第8课：交互与状态管理（8.x 手势/命中/通知 + 2.3 + 7.3 Provider + EX11~EX15）
+    ...m9Demos, // 第9课：动画、调试与质量（9.x 动画四角色/三写法/Hero/Switcher/隐式 + DevTools/异常 + EX16~EX20）
   ];
 
   @override
