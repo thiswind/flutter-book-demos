@@ -1,9 +1,7 @@
-import 'dart:async';
-import 'dart:math';
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import 'm10.dart';
 import 'm7.dart';
 import 'm8.dart';
 import 'm9.dart';
@@ -23,10 +21,7 @@ class FlutterBookDemosApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '教科书示例演示 · 第6课',
-      theme: ThemeData(
-        colorSchemeSeed: Colors.indigo,
-        useMaterial3: true,
-      ),
+      theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
       home: DemoHome(initialDemoId: initialDemoId),
     );
   }
@@ -62,29 +57,85 @@ class _DemoHomeState extends State<DemoHome> {
     Demo('3.1.1', 'Text 基础', '3.1.1 textAlign / maxLines / overflow', _d31Text),
     Demo('3.1.2', 'TextStyle', '3.1.2 颜色/字号/行高/装饰线', _d312Style),
     Demo('3.1.3', 'TextSpan 富文本', '3.1.3 Text.rich 一段文字多种样式', _d313Span),
-    Demo('3.1.4', 'DefaultTextStyle', '3.1.4 样式继承与 inherit:false', _d314Default),
+    Demo(
+      '3.1.4',
+      'DefaultTextStyle',
+      '3.1.4 样式继承与 inherit:false',
+      _d314Default,
+    ),
     Demo('3.2', '按钮家族', '3.2 四种按钮 + .icon 构造 + 禁用态', _d32Buttons),
     Demo('3.3.1', '图片 fit 七种', '3.3.1 BoxFit 全家福对比', _d331ImageFit),
-    Demo('3.3.1b', '图片混合与平铺', '3.3.1 color+blendMode / repeat', _d331bImageBlend),
+    Demo(
+      '3.3.1b',
+      '图片混合与平铺',
+      '3.3.1 color+blendMode / repeat',
+      _d331bImageBlend,
+    ),
     Demo('3.3.2', 'Icon 字体图标', '3.3.2 MaterialIcons 与图标本质', _d332Icon),
     Demo('3.5.1', 'TextField', '3.5.1 controller取值/密码框/焦点控制', _d351Input),
     Demo('3.6', '进度指示器', '3.6 模糊/精确 × 线/圆 + 自定义尺寸', _d36Progress),
-    Demo('4.2.3', 'ConstrainedBox/SizedBox', '4.2.3 最小高度强制/固定宽高', _d423Constraints),
+    Demo(
+      '4.2.3',
+      'ConstrainedBox/SizedBox',
+      '4.2.3 最小高度强制/固定宽高',
+      _d423Constraints,
+    ),
     Demo('4.2.5', '多重限制', '4.2.5 父子ConstrainedBox谁说了算', _d425Multi),
-    Demo('4.2.6', 'UnconstrainedBox', '4.2.6 "去除"父约束+AppBar实例', _d426Unconstrained),
-    Demo('4.3', 'Row/Column', '4.3 主轴交叉轴 + textDirection + 特殊情况', _d43RowColumn),
+    Demo(
+      '4.2.6',
+      'UnconstrainedBox',
+      '4.2.6 "去除"父约束+AppBar实例',
+      _d426Unconstrained,
+    ),
+    Demo(
+      '4.3',
+      'Row/Column',
+      '4.3 主轴交叉轴 + textDirection + 特殊情况',
+      _d43RowColumn,
+    ),
     Demo('4.4', 'Flex/Expanded/Spacer', '4.4 1:2 与 2:1:1 + Spacer原理', _d44Flex),
     Demo('4.5', 'Wrap 流式', '4.5.1 Chip标签云自动折行', _d45Wrap),
     Demo('4.6', 'Stack/Positioned', '4.6 层叠+定位+fit+绘制顺序', _d46Stack),
-    Demo('5.4', 'Container 卡片', '5.4.2 渐变/阴影/transform + padding vs margin', _d54Container),
-    Demo('EX1', '🎯 热区彩蛋 · 点击爆炸', 'Stack+Positioned 散落 Icon · GestureDetector 点中触发', _ex1Boom),
-    Demo('EX2', '💰 迷你记账本', 'Wrap 标签云 + TextSpan 富文本 + Stack 浮动按钮 + Expanded', _ex2Ledger),
-    Demo('EX3', '📅 打卡日历', 'Wrap 31 格 Container · GestureDetector setState 切换红蓝', _ex3Calendar),
-    Demo('EX4', '🎰 抽奖转盘', 'Stack 多层 Positioned · SweepGradient · AnimatedContainer 旋转', _ex4Wheel),
-    Demo('EX5', '🔥 朋友圈卡片', 'Container 卡片 + Wrap 九宫格图 + Text.rich 点赞列表', _ex5Moments),
+    Demo(
+      '5.4',
+      'Container 卡片',
+      '5.4.2 渐变/阴影/transform + padding vs margin',
+      _d54Container,
+    ),
+    Demo(
+      'EX1',
+      '🎯 热区彩蛋 · 点击爆炸',
+      'Stack+Positioned 散落 Icon · GestureDetector 点中触发',
+      _ex1Boom,
+    ),
+    Demo(
+      'EX2',
+      '💰 迷你记账本',
+      'Wrap 标签云 + TextSpan 富文本 + Stack 浮动按钮 + Expanded',
+      _ex2Ledger,
+    ),
+    Demo(
+      'EX3',
+      '📅 打卡日历',
+      'Wrap 31 格 Container · GestureDetector setState 切换红蓝',
+      _ex3Calendar,
+    ),
+    Demo(
+      'EX4',
+      '🎰 抽奖转盘',
+      'Stack 多层 Positioned · SweepGradient · AnimatedContainer 旋转',
+      _ex4Wheel,
+    ),
+    Demo(
+      'EX5',
+      '🔥 朋友圈卡片',
+      'Container 卡片 + Wrap 九宫格图 + Text.rich 点赞列表',
+      _ex5Moments,
+    ),
     ...m7Demos, // 第7课：可滚动组件与多页面结构（6.x + 2.4 路由 + EX6~EX10）
     ...m8Demos, // 第8课：交互与状态管理（8.x 手势/命中/通知 + 2.3 + 7.3 Provider + EX11~EX15）
     ...m9Demos, // 第9课：动画、调试与质量（9.x 动画四角色/三写法/Hero/Switcher/隐式 + DevTools/异常 + EX16~EX20）
+    ...m10Demos, // 第10课：本地数据存储（11.1 文件/sp/建库/CRUD/条件查询/迁移/选型 + EX21~EX25）
   ];
 
   @override
@@ -105,7 +156,9 @@ class _DemoHomeState extends State<DemoHome> {
           ),
           IconButton(
             tooltip: '下一个',
-            onPressed: _index == demos.length - 1 ? null : () => setState(() => _index++),
+            onPressed: _index == demos.length - 1
+                ? null
+                : () => setState(() => _index++),
             icon: const Icon(Icons.arrow_forward),
           ),
         ],
@@ -115,9 +168,15 @@ class _DemoHomeState extends State<DemoHome> {
           itemCount: demos.length,
           itemBuilder: (_, i) => ListTile(
             selected: i == _index,
-            leading: Text(demos[i].id, style: const TextStyle(fontSize: 12, color: Colors.indigo)),
+            leading: Text(
+              demos[i].id,
+              style: const TextStyle(fontSize: 12, color: Colors.indigo),
+            ),
             title: Text(demos[i].title, style: const TextStyle(fontSize: 14)),
-            subtitle: Text(demos[i].subtitle, style: const TextStyle(fontSize: 11)),
+            subtitle: Text(
+              demos[i].subtitle,
+              style: const TextStyle(fontSize: 11),
+            ),
             dense: true,
             onTap: () {
               setState(() => _index = i);
@@ -132,8 +191,10 @@ class _DemoHomeState extends State<DemoHome> {
           children: [
             const SizedBox(width: 12),
             Expanded(
-              child: Text(demo.subtitle,
-                  style: const TextStyle(fontSize: 12, color: Colors.black54)),
+              child: Text(
+                demo.subtitle,
+                style: const TextStyle(fontSize: 12, color: Colors.black54),
+              ),
             ),
           ],
         ),
@@ -153,14 +214,19 @@ class _D311Text extends StatelessWidget {
         Container(
           color: Colors.amber[100],
           width: double.infinity,
-          child: const Text('Hello world',
-              textAlign: TextAlign.center), // 内容不足一行时对齐无意义
+          child: const Text(
+            'Hello world',
+            textAlign: TextAlign.center,
+          ), // 内容不足一行时对齐无意义
         ),
         const SizedBox(height: 8),
         Container(
           color: Colors.amber[100],
           width: double.infinity,
-          child: Text('Hello world ' * 6, textAlign: TextAlign.center), // 换行后第二行居中
+          child: Text(
+            'Hello world ' * 6,
+            textAlign: TextAlign.center,
+          ), // 换行后第二行居中
         ),
         sec('② maxLines + overflow 截断'),
         Container(
@@ -177,7 +243,11 @@ class _D311Text extends StatelessWidget {
           children: const [
             Text('正常', style: TextStyle(fontSize: 16)),
             SizedBox(width: 12),
-            Text('放大', textScaler: TextScaler.linear(1.5), style: TextStyle(fontSize: 16)),
+            Text(
+              '放大',
+              textScaler: TextScaler.linear(1.5),
+              style: TextStyle(fontSize: 16),
+            ),
           ],
         ),
       ],
@@ -236,33 +306,43 @@ class _D313Span extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       children: [
         sec('① 书上示例：一段话里嵌蓝色可点击链接'),
-        Text.rich(TextSpan(
-          children: [
-            const TextSpan(text: 'Home: '),
-            TextSpan(
-              text: 'https://flutterchina.club',
-              style: const TextStyle(
-                color: Colors.blue,
-                decoration: TextDecoration.underline,
+        Text.rich(
+          TextSpan(
+            children: [
+              const TextSpan(text: 'Home: '),
+              TextSpan(
+                text: 'https://flutterchina.club',
+                style: const TextStyle(
+                  color: Colors.blue,
+                  decoration: TextDecoration.underline,
+                ),
+                recognizer: TapGestureRecognizer(),
               ),
-              recognizer: TapGestureRecognizer(),
-            ),
-          ],
-        )),
+            ],
+          ),
+        ),
         sec('② TextSpan 可嵌套 children'),
-        Text.rich(TextSpan(
-          style: const TextStyle(fontSize: 18, color: Colors.black87),
-          children: [
-            const TextSpan(text: '移动应用'),
-            TextSpan(
-              text: '软件开发',
-              style: TextStyle(color: Colors.indigo[700], fontWeight: FontWeight.bold),
-              children: const [
-                TextSpan(text: '实训', style: TextStyle(decoration: TextDecoration.underline)),
-              ],
-            ),
-          ],
-        )),
+        Text.rich(
+          TextSpan(
+            style: const TextStyle(fontSize: 18, color: Colors.black87),
+            children: [
+              const TextSpan(text: '移动应用'),
+              TextSpan(
+                text: '软件开发',
+                style: TextStyle(
+                  color: Colors.indigo[700],
+                  fontWeight: FontWeight.bold,
+                ),
+                children: const [
+                  TextSpan(
+                    text: '实训',
+                    style: TextStyle(decoration: TextDecoration.underline),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
         sec('③ 本质：Text 是 RichText 的包装'),
         const Text(
           '普通 Text 所有文字只能一种样式；\n'
@@ -344,11 +424,20 @@ class _D32Buttons extends StatelessWidget {
           runSpacing: 12,
           children: [
             ElevatedButton.icon(
-                onPressed: () {}, icon: const Icon(Icons.send), label: const Text('发送')),
+              onPressed: () {},
+              icon: const Icon(Icons.send),
+              label: const Text('发送'),
+            ),
             OutlinedButton.icon(
-                onPressed: () {}, icon: const Icon(Icons.add), label: const Text('添加')),
+              onPressed: () {},
+              icon: const Icon(Icons.add),
+              label: const Text('添加'),
+            ),
             TextButton.icon(
-                onPressed: () {}, icon: const Icon(Icons.info), label: const Text('详情')),
+              onPressed: () {},
+              icon: const Icon(Icons.info),
+              label: const Text('详情'),
+            ),
           ],
         ),
         sec('④ onPressed: null = 禁用置灰'),
@@ -359,8 +448,10 @@ class _D32Buttons extends StatelessWidget {
             OutlinedButton(onPressed: null, child: const Text('禁用中')),
           ],
         ),
-        const Text('第8课表单"校验没过→提交按钮置灰"就是它',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '第8课表单"校验没过→提交按钮置灰"就是它',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
       ],
     );
   }
@@ -423,17 +514,21 @@ class _D331bImageBlend extends StatelessWidget {
         sec('① color + colorBlendMode 像素级混合'),
         Row(
           children: [
-            Image.asset('assets/avatar.png',
-                width: 100,
-                color: Colors.blue,
-                colorBlendMode: BlendMode.difference,
-                fit: BoxFit.fill),
+            Image.asset(
+              'assets/avatar.png',
+              width: 100,
+              color: Colors.blue,
+              colorBlendMode: BlendMode.difference,
+              fit: BoxFit.fill,
+            ),
             const SizedBox(width: 16),
-            Image.asset('assets/avatar.png',
-                width: 100,
-                color: Colors.red,
-                colorBlendMode: BlendMode.multiply,
-                fit: BoxFit.fill),
+            Image.asset(
+              'assets/avatar.png',
+              width: 100,
+              color: Colors.red,
+              colorBlendMode: BlendMode.multiply,
+              fit: BoxFit.fill,
+            ),
           ],
         ),
         sec('② repeat 平铺（图小于显示框时）'),
@@ -441,11 +536,17 @@ class _D331bImageBlend extends StatelessWidget {
           width: 200,
           height: 120,
           decoration: BoxDecoration(border: Border.all(color: Colors.black26)),
-          child: Image.asset('assets/avatar.png',
-              width: 100, fit: BoxFit.none, repeat: ImageRepeat.repeat),
+          child: Image.asset(
+            'assets/avatar.png',
+            width: 100,
+            fit: BoxFit.none,
+            repeat: ImageRepeat.repeat,
+          ),
         ),
-        const Text('ImageRepeat.repeatY 只纵向平铺；默认 noRepeat',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          'ImageRepeat.repeatY 只纵向平铺；默认 noRepeat',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
       ],
     );
   }
@@ -469,8 +570,10 @@ class _D332Icon extends StatelessWidget {
             color: Colors.green,
           ),
         ),
-        const Text('码点：accessible / error / fingerprint',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '码点：accessible / error / fingerprint',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
         sec('② Icon 组件 = 码点的友好封装'),
         const Row(
           children: [
@@ -618,18 +721,17 @@ class _D36Progress extends StatelessWidget {
           ],
         ),
         sec('③ 没有尺寸参数——尺寸来自父约束'),
-        const SizedBox(
-          height: 3,
-          child: LinearProgressIndicator(value: .5),
-        ),
+        const SizedBox(height: 3, child: LinearProgressIndicator(value: .5)),
         const SizedBox(height: 12),
         const SizedBox(
           width: 100,
           height: 100,
           child: CircularProgressIndicator(value: .7),
         ),
-        const Text('宽高不等 → 变椭圆（下一行）',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '宽高不等 → 变椭圆（下一行）',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
         const SizedBox(
           width: 130,
           height: 100,
@@ -659,26 +761,24 @@ class _D423Constraints extends StatelessWidget {
             minWidth: double.infinity,
             minHeight: 50.0,
           ),
-          child: Container(
-            height: 5.0,
-            child: redBox,
-          ),
+          child: Container(height: 5.0, child: redBox),
         ),
-        const Text('Container 想要 5，约束说最少 50 → 最终 50',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          'Container 想要 5，约束说最少 50 → 最终 50',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
         sec('② 同样的盒子写 80 呢？'),
         ConstrainedBox(
           constraints: const BoxConstraints(
             minWidth: double.infinity,
             minHeight: 50.0,
           ),
-          child: Container(
-            height: 80.0,
-            child: redBox,
-          ),
+          child: Container(height: 80.0, child: redBox),
         ),
-        const Text('5<50 取 50；80>50 取 80 → min 只托底不封顶',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '5<50 取 50；80>50 取 80 → min 只托底不封顶',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
         sec('③ SizedBox = 固定宽高的 ConstrainedBox'),
         SizedBox(width: 80, height: 40, child: redBox),
       ],
@@ -713,7 +813,7 @@ class _D425Multi extends StatelessWidget {
           child: ConstrainedBox(
             constraints: const BoxConstraints(minWidth: 60.0, minHeight: 60.0),
             child: redBox,
-        ),
+          ),
         ),
         sec('③ 规律：min 取父子较大者（保证不冲突）'),
         const Text(
@@ -756,23 +856,34 @@ class _D426Unconstrained extends StatelessWidget {
           ConstrainedBox(
             constraints: const BoxConstraints(minWidth: 60.0, minHeight: 100.0),
             child: ConstrainedBox(
-              constraints: const BoxConstraints(minWidth: 90.0, minHeight: 20.0),
+              constraints: const BoxConstraints(
+                minWidth: 90.0,
+                minHeight: 20.0,
+              ),
               child: redBox,
             ),
           ),
-          const Text('多重限制规则 → 90×100', style: TextStyle(fontSize: 12, color: Colors.black54)),
+          const Text(
+            '多重限制规则 → 90×100',
+            style: TextStyle(fontSize: 12, color: Colors.black54),
+          ),
           sec('② 加 UnconstrainedBox：红块回归 90×20，但父仍占 100 高'),
           ConstrainedBox(
             constraints: const BoxConstraints(minWidth: 60.0, minHeight: 100.0),
             child: UnconstrainedBox(
               child: ConstrainedBox(
-                constraints: const BoxConstraints(minWidth: 90.0, minHeight: 20.0),
+                constraints: const BoxConstraints(
+                  minWidth: 90.0,
+                  minHeight: 20.0,
+                ),
                 child: redBox,
               ),
             ),
           ),
-          const Text('“去除”的是对子布局的约束，父的空间照占（上方有空白）',
-              style: TextStyle(fontSize: 12, color: Colors.black54)),
+          const Text(
+            '“去除”的是对子布局的约束，父的空间照占（上方有空白）',
+            style: TextStyle(fontSize: 12, color: Colors.black54),
+          ),
           sec('③ 书上实战：AppBar 右侧 loading 按钮改小'),
           const Text(
             'AppBar 的 actions 自带约束，SizedBox(20×20) 不生效 →'
@@ -849,8 +960,10 @@ class _D43RowColumn extends StatelessWidget {
             ],
           ),
         ),
-        const Text('外层 max 占满屏，内层 max 无效 → 想撑满用 Expanded',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '外层 max 占满屏，内层 max 无效 → 想撑满用 Expanded',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
       ],
     );
   }
@@ -869,10 +982,7 @@ class _D44Flex extends StatelessWidget {
         Flex(
           direction: Axis.horizontal,
           children: [
-            Expanded(
-              flex: 1,
-              child: Container(height: 30, color: Colors.red),
-            ),
+            Expanded(flex: 1, child: Container(height: 30, color: Colors.red)),
             Expanded(
               flex: 2,
               child: Container(height: 30, color: Colors.green),
@@ -901,7 +1011,11 @@ class _D44Flex extends StatelessWidget {
             '  build => Expanded(flex, SizedBox.shrink())\n'
             '}\n'
             '→ Spacer 只是"占住比例但什么都不画"的 Expanded',
-            style: TextStyle(fontFamily: 'monospace', fontSize: 13, height: 1.7),
+            style: TextStyle(
+              fontFamily: 'monospace',
+              fontSize: 13,
+              height: 1.7,
+            ),
           ),
         ),
         sec('④ Expanded 只能做 Flex 的孩子'),
@@ -926,17 +1040,25 @@ class _D45Wrap extends StatelessWidget {
       children: [
         sec('① 同样一组 Chip：Row 挤不下→溢出，Wrap→折行'),
         Container(
-          decoration:
-              BoxDecoration(border: Border.all(color: Colors.redAccent)),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.redAccent),
+          ),
           padding: const EdgeInsets.all(8),
           child: Row(
             children: [
-              for (final n in const ['Hamilton', 'Lafayette', 'Mulligan', 'Laurens'])
+              for (final n in const [
+                'Hamilton',
+                'Lafayette',
+                'Mulligan',
+                'Laurens',
+              ])
                 Padding(
                   padding: const EdgeInsets.only(right: 8),
                   child: Chip(
                     avatar: CircleAvatar(
-                        backgroundColor: Colors.blue, child: Text(n[0])),
+                      backgroundColor: Colors.blue,
+                      child: Text(n[0]),
+                    ),
                     label: Text(n),
                   ),
                 ),
@@ -949,9 +1071,17 @@ class _D45Wrap extends StatelessWidget {
           runSpacing: 4.0,
           alignment: WrapAlignment.center,
           children: [
-            for (final n in const ['Hamilton', 'Lafayette', 'Mulligan', 'Laurens'])
+            for (final n in const [
+              'Hamilton',
+              'Lafayette',
+              'Mulligan',
+              'Laurens',
+            ])
               Chip(
-                avatar: CircleAvatar(backgroundColor: Colors.blue, child: Text(n[0])),
+                avatar: CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Text(n[0]),
+                ),
                 label: Text(n),
               ),
           ],
@@ -983,8 +1113,10 @@ class _D46Stack extends StatelessWidget {
             children: <Widget>[
               Container(
                 color: Colors.red,
-                child: const Text('Hello world',
-                    style: TextStyle(color: Colors.white)),
+                child: const Text(
+                  'Hello world',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
               const Positioned(left: 18.0, child: Text('I am Jack')),
               const Positioned(top: 18.0, child: Text('Your friend')),
@@ -1001,15 +1133,19 @@ class _D46Stack extends StatelessWidget {
               const Positioned(left: 18.0, child: Text('I am Jack')),
               Container(
                 color: Colors.red,
-                child: const Text('Hello world',
-                    style: TextStyle(color: Colors.white)),
+                child: const Text(
+                  'Hello world',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
               const Positioned(top: 18.0, child: Text('Your friend')),
             ],
           ),
         ),
-        const Text('未定位的 Container 被 fit 拉满 → 盖住第一个 Positioned',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '未定位的 Container 被 fit 拉满 → 盖住第一个 Positioned',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
         sec('③ Positioned 三选二规则'),
         const Text(
           '水平：left/right/width 只能指定其中两个（第三个自动算）；\n'
@@ -1035,8 +1171,10 @@ class _D54Container extends StatelessWidget {
           alignment: Alignment.center,
           child: Container(
             margin: const EdgeInsets.only(top: 10.0),
-            constraints:
-                const BoxConstraints.tightFor(width: 200.0, height: 150.0),
+            constraints: const BoxConstraints.tightFor(
+              width: 200.0,
+              height: 150.0,
+            ),
             decoration: BoxDecoration(
               gradient: RadialGradient(
                 colors: const [Colors.red, Colors.orange],
@@ -1048,7 +1186,7 @@ class _D54Container extends StatelessWidget {
                   color: Colors.black54,
                   offset: Offset(2.0, 2.0),
                   blurRadius: 4.0,
-                )
+                ),
               ],
             ),
             transform: Matrix4.rotationZ(.2),
@@ -1071,8 +1209,10 @@ class _D54Container extends StatelessWidget {
           color: Colors.orange,
           child: const Text('padding 内补白'),
         ),
-        const Text('两者底层都是 Padding 组件：margin=包在外面的留白',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '两者底层都是 Padding 组件：margin=包在外面的留白',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
         sec('③ color 与 decoration 互斥'),
         const Text(
           'Container(color: red, decoration: BoxDecoration(...)) → 编译/运行报错\n'
@@ -1103,9 +1243,15 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
 
   // 用色块模拟九宫格照片（课堂上讲：真实 App 里是 Image.network）
   static const _photoColors = [
-    Color(0xFF90CAF9), Color(0xFFFFCC80), Color(0xFFA5D6A7),
-    Color(0xFFEF9A9A), Color(0xFFCE93D8), Color(0xFF80DEEA),
-    Color(0xFFFFF59D), Color(0xFFBCAAA4), Color(0xFFB0BEC5),
+    Color(0xFF90CAF9),
+    Color(0xFFFFCC80),
+    Color(0xFFA5D6A7),
+    Color(0xFFEF9A9A),
+    Color(0xFFCE93D8),
+    Color(0xFF80DEEA),
+    Color(0xFFFFF59D),
+    Color(0xFFBCAAA4),
+    Color(0xFFB0BEC5),
   ];
 
   void _toggleLike(String name) {
@@ -1161,7 +1307,10 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                       const CircleAvatar(
                         radius: 22,
                         backgroundColor: Colors.indigo,
-                        child: Text('胡', style: TextStyle(color: Colors.white, fontSize: 18)),
+                        child: Text(
+                          '胡',
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
                       ),
                       // Stack 角标：黄V认证
                       Positioned(
@@ -1173,7 +1322,11 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                             color: Colors.amber,
                             shape: BoxShape.circle,
                           ),
-                          child: const Icon(Icons.check, size: 10, color: Colors.white),
+                          child: const Icon(
+                            Icons.check,
+                            size: 10,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ],
@@ -1183,16 +1336,28 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('胡老师',
-                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF5B7DB1))),
+                        Text(
+                          '胡老师',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: Color(0xFF5B7DB1),
+                          ),
+                        ),
                         SizedBox(height: 2),
-                        Text('2小时前', style: TextStyle(fontSize: 12, color: Colors.black38)),
+                        Text(
+                          '2小时前',
+                          style: TextStyle(fontSize: 12, color: Colors.black38),
+                        ),
                       ],
                     ),
                   ),
                   // 菜单按钮（两点半角标按钮，Stack 再练一次）
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 5,
+                    ),
                     decoration: BoxDecoration(
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(4),
@@ -1202,7 +1367,11 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                       children: [
                         Icon(Icons.favorite, size: 14, color: Colors.black54),
                         SizedBox(width: 4),
-                        Icon(Icons.chat_bubble_outline, size: 14, color: Colors.black54),
+                        Icon(
+                          Icons.chat_bubble_outline,
+                          size: 14,
+                          color: Colors.black54,
+                        ),
                       ],
                     ),
                   ),
@@ -1214,7 +1383,9 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                 TextSpan(
                   style: const TextStyle(fontSize: 15, height: 1.5),
                   children: [
-                    const TextSpan(text: '今天第6课：把教科书第3~5章的组件全部做成了 23 个可运行演示页。\n'),
+                    const TextSpan(
+                      text: '今天第6课：把教科书第3~5章的组件全部做成了 23 个可运行演示页。\n',
+                    ),
                     TextSpan(
                       text: '#Flutter基础组件# ',
                       style: TextStyle(color: Color(0xFF5B7DB1)),
@@ -1242,7 +1413,11 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                           color: c,
                           borderRadius: BorderRadius.circular(4),
                         ),
-                        child: const Icon(Icons.photo, color: Colors.white24, size: 28),
+                        child: const Icon(
+                          Icons.photo,
+                          color: Colors.white24,
+                          size: 28,
+                        ),
                       ),
                   ],
                 ),
@@ -1261,24 +1436,39 @@ class _Ex5MomentsState extends State<_Ex5Moments> {
                     GestureDetector(
                       onTap: () => _toggleLike('我'),
                       child: Text.rich(
-                        TextSpan(children: [
-                          const WidgetSpan(child: Icon(Icons.favorite, size: 14, color: Colors.redAccent)),
-                          const TextSpan(text: '  '),
-                          TextSpan(
-                            text: _liked.join('、'),
-                            style: const TextStyle(color: Color(0xFF5B7DB1)),
-                          ),
-                        ]),
+                        TextSpan(
+                          children: [
+                            const WidgetSpan(
+                              child: Icon(
+                                Icons.favorite,
+                                size: 14,
+                                color: Colors.redAccent,
+                              ),
+                            ),
+                            const TextSpan(text: '  '),
+                            TextSpan(
+                              text: _liked.join('、'),
+                              style: const TextStyle(color: Color(0xFF5B7DB1)),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     for (final c in _comments)
                       Padding(
                         padding: const EdgeInsets.only(top: 4),
                         child: Text.rich(
-                          TextSpan(children: [
-                            TextSpan(text: '${c.author}：', style: const TextStyle(color: Color(0xFF5B7DB1))),
-                            TextSpan(text: c.text),
-                          ]),
+                          TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '${c.author}：',
+                                style: const TextStyle(
+                                  color: Color(0xFF5B7DB1),
+                                ),
+                              ),
+                              TextSpan(text: c.text),
+                            ],
+                          ),
                         ),
                       ),
                   ],
@@ -1312,14 +1502,16 @@ class _Comment {
 
 // ========== 公共小节标题（m6/m7 共用） ==========
 Widget sec(String title) => Padding(
-      padding: const EdgeInsets.only(top: 16, bottom: 8),
-      child: Text(title,
-          style: const TextStyle(
-            fontSize: 13,
-            fontWeight: FontWeight.bold,
-            color: Colors.indigo,
-          )),
-    );
+  padding: const EdgeInsets.only(top: 16, bottom: 8),
+  child: Text(
+    title,
+    style: const TextStyle(
+      fontSize: 13,
+      fontWeight: FontWeight.bold,
+      color: Colors.indigo,
+    ),
+  ),
+);
 
 // ========== EX1 热区彩蛋 · 点击爆炸 ==========
 Widget _ex1Boom(BuildContext context) => _Ex1Boom();
@@ -1337,7 +1529,12 @@ class _Ex1BoomState extends State<_Ex1Boom> {
     _PosIcon(top: 60, left: 180, icon: Icons.favorite, color: Colors.redAccent),
     _PosIcon(top: 140, left: 80, icon: Icons.bolt, color: Colors.orange),
     _PosIcon(top: 100, left: 260, icon: Icons.water_drop, color: Colors.blue),
-    _PosIcon(top: 200, left: 150, icon: Icons.auto_awesome, color: Colors.purpleAccent),
+    _PosIcon(
+      top: 200,
+      left: 150,
+      icon: Icons.auto_awesome,
+      color: Colors.purpleAccent,
+    ),
   ];
 
   @override
@@ -1357,8 +1554,10 @@ class _Ex1BoomState extends State<_Ex1Boom> {
             ],
           ),
         ),
-        const Text('👆 点一个图标试试，彩蛋就藏在里面',
-            style: TextStyle(fontSize: 13, color: Colors.black54)),
+        const Text(
+          '👆 点一个图标试试，彩蛋就藏在里面',
+          style: TextStyle(fontSize: 13, color: Colors.black54),
+        ),
         const SizedBox(height: 8),
         Expanded(
           child: Container(
@@ -1375,7 +1574,9 @@ class _Ex1BoomState extends State<_Ex1Boom> {
                     top: p.top,
                     left: p.left,
                     child: GestureDetector(
-                      onTap: () => setState(() => _hitIcon = p.icon.codePoint.toString()),
+                      onTap: () => setState(
+                        () => _hitIcon = p.icon.codePoint.toString(),
+                      ),
                       child: Icon(p.icon, color: p.color, size: 36),
                     ),
                   ),
@@ -1396,11 +1597,14 @@ class _Ex1BoomState extends State<_Ex1Boom> {
                             ),
                           ],
                         ),
-                        child: const Text('!',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 60,
-                                fontWeight: FontWeight.w900)),
+                        child: const Text(
+                          '!',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 60,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -1418,7 +1622,12 @@ class _PosIcon {
   final double left;
   final IconData icon;
   final Color color;
-  const _PosIcon({required this.top, required this.left, required this.icon, required this.color});
+  const _PosIcon({
+    required this.top,
+    required this.left,
+    required this.icon,
+    required this.color,
+  });
 }
 
 // ========== EX2 迷你记账本 ==========
@@ -1483,22 +1692,35 @@ class _Ex2LedgerState extends State<_Ex2Ledger> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(it.title,
-                                  style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600)),
+                              Text(
+                                it.title,
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                               const SizedBox(height: 4),
                               Wrap(
                                 spacing: 4,
                                 children: [
                                   Container(
-                                    padding:
-                                        const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 8,
+                                      vertical: 2,
+                                    ),
                                     decoration: BoxDecoration(
-                                      color: it.tagColor.withValues(alpha: 0.15),
+                                      color: it.tagColor.withValues(
+                                        alpha: 0.15,
+                                      ),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
-                                    child: Text(it.tag,
-                                        style: TextStyle(
-                                            fontSize: 11, color: it.tagColor)),
+                                    child: Text(
+                                      it.tag,
+                                      style: TextStyle(
+                                        fontSize: 11,
+                                        color: it.tagColor,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -1508,13 +1730,17 @@ class _Ex2LedgerState extends State<_Ex2Ledger> {
                         Text.rich(
                           TextSpan(
                             children: [
-                              const TextSpan(text: '¥', style: TextStyle(color: Colors.blueGrey)),
+                              const TextSpan(
+                                text: '¥',
+                                style: TextStyle(color: Colors.blueGrey),
+                              ),
                               TextSpan(
                                 text: it.amount.toStringAsFixed(1),
                                 style: const TextStyle(
-                                    color: Colors.blue,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
+                                  color: Colors.blue,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ],
                           ),
@@ -1592,10 +1818,17 @@ class _Ex3CalendarState extends State<_Ex3Calendar> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('📅 2026 年 10 月 · 31 天',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-            Text('已打卡 ${_checked.where((e) => e).length} 天',
-                style: const TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600)),
+            const Text(
+              '📅 2026 年 10 月 · 31 天',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              '已打卡 ${_checked.where((e) => e).length} 天',
+              style: const TextStyle(
+                color: Colors.redAccent,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ],
         ),
         const SizedBox(height: 12),
@@ -1614,7 +1847,8 @@ class _Ex3CalendarState extends State<_Ex3Calendar> {
               return GestureDetector(
                 onTap: () => setState(() => _checked[i] = !_checked[i]),
                 child: Container(
-                  width: (MediaQuery.of(context).size.width - 24 - 12 - 6 * 6) / 7,
+                  width:
+                      (MediaQuery.of(context).size.width - 24 - 12 - 6 * 6) / 7,
                   height: 42,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
@@ -1634,8 +1868,10 @@ class _Ex3CalendarState extends State<_Ex3Calendar> {
           ),
         ),
         const SizedBox(height: 16),
-        const Text('点格子切换打卡状态 · Wrap 自动换行 7 × 5 + 6 = 31 格',
-            style: TextStyle(fontSize: 12, color: Colors.black54)),
+        const Text(
+          '点格子切换打卡状态 · Wrap 自动换行 7 × 5 + 6 = 31 格',
+          style: TextStyle(fontSize: 12, color: Colors.black54),
+        ),
       ],
     );
   }
@@ -1716,7 +1952,11 @@ class _Ex4WheelState extends State<_Ex4Wheel> {
                       left: 20,
                       child: Transform.rotate(
                         angle: i * 6.28 / 6,
-                        child: const Icon(Icons.star, color: Colors.deepOrange, size: 20),
+                        child: const Icon(
+                          Icons.star,
+                          color: Colors.deepOrange,
+                          size: 20,
+                        ),
                       ),
                     ),
                   // 中心大按钮
@@ -1726,7 +1966,10 @@ class _Ex4WheelState extends State<_Ex4Wheel> {
                       backgroundColor: Colors.deepOrange,
                       foregroundColor: Colors.white,
                       minimumSize: const Size(100, 100),
-                      textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      textStyle: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
                     ),
                     onPressed: _spin,
                     child: const Text('开始\n抽奖', textAlign: TextAlign.center),
@@ -1740,7 +1983,11 @@ class _Ex4WheelState extends State<_Ex4Wheel> {
                         color: Colors.red,
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.arrow_drop_down, color: Colors.white, size: 18),
+                      child: const Icon(
+                        Icons.arrow_drop_down,
+                        color: Colors.white,
+                        size: 18,
+                      ),
                     ),
                   ),
                 ],
@@ -1752,7 +1999,11 @@ class _Ex4WheelState extends State<_Ex4Wheel> {
           padding: const EdgeInsets.fromLTRB(12, 0, 12, 16),
           child: Text(
             _result ?? '点中间按钮开转！',
-            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.deepOrange),
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.deepOrange,
+            ),
           ),
         ),
       ],
