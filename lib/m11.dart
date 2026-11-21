@@ -26,8 +26,11 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'main.dart' show Demo, sec;
 
-/// 统一数据集基地址：本站 dataset/（与课堂发布的仓库托管地址同内容）
-const kBase = 'https://thiswind.github.io/flutter-book-demos/dataset';
+/// 统一数据集基地址：本站 dataset/ 目录（与课堂发布的仓库托管地址同内容）。
+/// 注意必须用 Uri.base.resolve 相对解析：本站 GitHub Pages 配置了自定义
+/// 域（github.io 会 301 到 myblog.thiswind.work），写死 github.io 绝对
+/// 地址会变成跨源请求被 CORS 拦截；相对解析则无论从哪个域访问都同源。
+Uri datasetUri(String file) => Uri.base.resolve('dataset/$file');
 
 // ============================================================
 // Book 模型（11.7 手工模型化 + 讲义 fromJsonSafe 缺字段兜底）
@@ -95,7 +98,7 @@ class AppException implements Exception {
 Future<List<Book>> fetchBooks(String file) async {
   try {
     final resp = await http
-        .get(Uri.parse('$kBase/$file'))
+        .get(datasetUri(file))
         .timeout(const Duration(seconds: 8));
     if (resp.statusCode == 200) {
       final list = jsonDecode(resp.body) as List;
@@ -358,7 +361,7 @@ class _Net3Page extends StatefulWidget {
 class _Net3PageState extends State<_Net3Page> {
   String _log = '（待请求）';
   final _dio = Dio(BaseOptions(
-    baseUrl: kBase,
+    baseUrl: Uri.base.resolve('dataset/').toString(), // 相对解析：见 datasetUri 说明
     connectTimeout: const Duration(seconds: 8),
     receiveTimeout: const Duration(seconds: 8),
   ));
@@ -412,7 +415,7 @@ class _Net3PageState extends State<_Net3Page> {
           padding: const EdgeInsets.all(12),
           color: Colors.indigo.shade50,
           child: const Text(
-            'final dio = Dio(BaseOptions(baseUrl: kBase,\n'
+            'final dio = Dio(BaseOptions(baseUrl: 相对地址,\n'
             '    connectTimeout: Duration(seconds: 8)));\n'
             'final resp = await dio.get<List<dynamic>>("/books.json");\n'
             '// 自动 jsonDecode：resp.data 直接是 List\n'
@@ -1374,7 +1377,7 @@ class _Ex28PageState extends State<_Ex28Page> {
   String _log = '（点按钮）';
 
   Future<void> _bad() async {
-    final resp = await http.get(Uri.parse('$kBase/no_such_file.json'));
+    final resp = await http.get(datasetUri('no_such_file.json'));
     // 病号代码：没判 statusCode，直接 jsonDecode
     try {
       final data = jsonDecode(resp.body);
@@ -1392,7 +1395,7 @@ class _Ex28PageState extends State<_Ex28Page> {
   }
 
   Future<void> _good() async {
-    final resp = await http.get(Uri.parse('$kBase/no_such_file.json'));
+    final resp = await http.get(datasetUri('no_such_file.json'));
     if (resp.statusCode == 200) {
       final list = jsonDecode(resp.body) as List;
       setState(() => _log = '正常路径：${list.length} 条');
