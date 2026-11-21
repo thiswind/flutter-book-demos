@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'm10.dart';
+import 'm11.dart';
 import 'm7.dart';
 import 'm8.dart';
 import 'm9.dart';
@@ -136,6 +137,7 @@ class _DemoHomeState extends State<DemoHome> {
     ...m8Demos, // 第8课：交互与状态管理（8.x 手势/命中/通知 + 2.3 + 7.3 Provider + EX11~EX15）
     ...m9Demos, // 第9课：动画、调试与质量（9.x 动画四角色/三写法/Hero/Switcher/隐式 + DevTools/异常 + EX16~EX20）
     ...m10Demos, // 第10课：本地数据存储（11.1 文件/sp/建库/CRUD/条件查询/迁移/选型 + EX21~EX25）
+    ...m11Demos, // 第11课：网络访问与异步交互（11.2/11.3/11.5/11.7 教科书收官 + 三态/分页/缓存 + EX26~EX30）
   ];
 
   @override
