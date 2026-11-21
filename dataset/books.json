@@ -1,0 +1,326 @@
+[
+ {
+  "id": "b01",
+  "title": "跨平台之路",
+  "category": "计算机技术",
+  "author": "张承志",
+  "rating": 5,
+  "borrowCount": 9,
+  "month": "1月"
+ },
+ {
+  "id": "b13",
+  "title": "状态管理简史",
+  "category": "经济管理",
+  "author": "张承志",
+  "rating": 4,
+  "borrowCount": 66,
+  "month": "1月"
+ },
+ {
+  "id": "b25",
+  "title": "异步的秩序",
+  "category": "科普百科",
+  "author": "张承志",
+  "rating": 5,
+  "borrowCount": 72,
+  "month": "1月"
+ },
+ {
+  "id": "b02",
+  "title": "山河故人",
+  "category": "计算机技术",
+  "author": "李婉清",
+  "rating": 4,
+  "borrowCount": 12,
+  "month": "2月"
+ },
+ {
+  "id": "b14",
+  "title": "人间草木",
+  "category": "经济管理",
+  "author": "李婉清",
+  "rating": 4,
+  "borrowCount": 17,
+  "month": "2月"
+ },
+ {
+  "id": "b26",
+  "title": "长河落日",
+  "category": "科普百科",
+  "author": "李婉清",
+  "rating": 4,
+  "borrowCount": 83,
+  "month": "2月"
+ },
+ {
+  "id": "b03",
+  "title": "增长的本质",
+  "category": "计算机技术",
+  "author": "Robert Martin",
+  "rating": 5,
+  "borrowCount": 10,
+  "month": "3月"
+ },
+ {
+  "id": "b15",
+  "title": "博弈与生活",
+  "category": "经济管理",
+  "author": "Robert Martin",
+  "rating": 3,
+  "borrowCount": 81,
+  "month": "3月"
+ },
+ {
+  "id": "b27",
+  "title": "定价的艺术",
+  "category": "科普百科",
+  "author": "Robert Martin",
+  "rating": 3,
+  "borrowCount": 62,
+  "month": "3月"
+ },
+ {
+  "id": "b04",
+  "title": "留白的设计",
+  "category": "计算机技术",
+  "author": "陈从周",
+  "rating": 5,
+  "borrowCount": 21,
+  "month": "4月"
+ },
+ {
+  "id": "b16",
+  "title": "色彩的语言",
+  "category": "经济管理",
+  "author": "陈从周",
+  "rating": 4,
+  "borrowCount": 13,
+  "month": "4月"
+ },
+ {
+  "id": "b28",
+  "title": "工业设计史",
+  "category": "科普百科",
+  "author": "陈从周",
+  "rating": 4,
+  "borrowCount": 31,
+  "month": "4月"
+ },
+ {
+  "id": "b05",
+  "title": "宇宙的琴弦",
+  "category": "计算机技术",
+  "author": "Karen Price",
+  "rating": 5,
+  "borrowCount": 30,
+  "month": "5月"
+ },
+ {
+  "id": "b17",
+  "title": "概率的迷宫",
+  "category": "经济管理",
+  "author": "Karen Price",
+  "rating": 3,
+  "borrowCount": 34,
+  "month": "5月"
+ },
+ {
+  "id": "b29",
+  "title": "光的故事",
+  "category": "科普百科",
+  "author": "Karen Price",
+  "rating": 4,
+  "borrowCount": 67,
+  "month": "5月"
+ },
+ {
+  "id": "b06",
+  "title": "西南联大史",
+  "category": "计算机技术",
+  "author": "王砚农",
+  "rating": 5,
+  "borrowCount": 23,
+  "month": "6月"
+ },
+ {
+  "id": "b18",
+  "title": "大明王朝",
+  "category": "经济管理",
+  "author": "王砚农",
+  "rating": 5,
+  "borrowCount": 16,
+  "month": "6月"
+ },
+ {
+  "id": "b30",
+  "title": "甲午战争",
+  "category": "科普百科",
+  "author": "王砚农",
+  "rating": 4,
+  "borrowCount": 42,
+  "month": "6月"
+ },
+ {
+  "id": "b07",
+  "title": "渲染管线十二讲",
+  "category": "文学小说",
+  "author": "杜文",
+  "rating": 5,
+  "borrowCount": 87,
+  "month": "7月"
+ },
+ {
+  "id": "b19",
+  "title": "布局约束之美",
+  "category": "艺术设计",
+  "author": "杜文",
+  "rating": 3,
+  "borrowCount": 14,
+  "month": "7月"
+ },
+ {
+  "id": "b31",
+  "title": "组件化的艺术",
+  "category": "历史哲学",
+  "author": "杜文",
+  "rating": 4,
+  "borrowCount": 76,
+  "month": "7月"
+ },
+ {
+  "id": "b08",
+  "title": "边城新纪",
+  "category": "文学小说",
+  "author": "Itō Takashi",
+  "rating": 5,
+  "borrowCount": 22,
+  "month": "8月"
+ },
+ {
+  "id": "b20",
+  "title": "平凡的世界",
+  "category": "艺术设计",
+  "author": "Itō Takashi",
+  "rating": 5,
+  "borrowCount": 15,
+  "month": "8月"
+ },
+ {
+  "id": "b32",
+  "title": "活着",
+  "category": "历史哲学",
+  "author": "Itō Takashi",
+  "rating": 3,
+  "borrowCount": 25,
+  "month": "8月"
+ },
+ {
+  "id": "b09",
+  "title": "选择的悖论",
+  "category": "文学小说",
+  "author": "沈云龙",
+  "rating": 3,
+  "borrowCount": 23,
+  "month": "9月"
+ },
+ {
+  "id": "b21",
+  "title": "稀缺",
+  "category": "艺术设计",
+  "author": "沈云龙",
+  "rating": 4,
+  "borrowCount": 23,
+  "month": "9月"
+ },
+ {
+  "id": "b33",
+  "title": "创新者窘境",
+  "category": "历史哲学",
+  "author": "沈云龙",
+  "rating": 4,
+  "borrowCount": 49,
+  "month": "9月"
+ },
+ {
+  "id": "b10",
+  "title": "字体与网格",
+  "category": "文学小说",
+  "author": "Pedro Alves",
+  "rating": 5,
+  "borrowCount": 77,
+  "month": "10月"
+ },
+ {
+  "id": "b22",
+  "title": "交互的未来",
+  "category": "艺术设计",
+  "author": "Pedro Alves",
+  "rating": 3,
+  "borrowCount": 12,
+  "month": "10月"
+ },
+ {
+  "id": "b34",
+  "title": "包豪斯",
+  "category": "历史哲学",
+  "author": "Pedro Alves",
+  "rating": 4,
+  "borrowCount": 58,
+  "month": "10月"
+ },
+ {
+  "id": "b11",
+  "title": "时间的形状",
+  "category": "文学小说",
+  "author": "林微因",
+  "rating": 4,
+  "borrowCount": 64,
+  "month": "11月"
+ },
+ {
+  "id": "b23",
+  "title": "元素的故事",
+  "category": "艺术设计",
+  "author": "林微因",
+  "rating": 5,
+  "borrowCount": 27,
+  "month": "11月"
+ },
+ {
+  "id": "b35",
+  "title": "进化论",
+  "category": "历史哲学",
+  "author": "林微因",
+  "rating": 5,
+  "borrowCount": 22,
+  "month": "11月"
+ },
+ {
+  "id": "b12",
+  "title": "茶马古道",
+  "category": "文学小说",
+  "author": "周树人",
+  "rating": 3,
+  "borrowCount": 87,
+  "month": "12月"
+ },
+ {
+  "id": "b24",
+  "title": "丝绸之路",
+  "category": "艺术设计",
+  "author": "周树人",
+  "rating": 3,
+  "borrowCount": 10,
+  "month": "12月"
+ },
+ {
+  "id": "b36",
+  "title": "万历十五年",
+  "category": "历史哲学",
+  "author": "周树人",
+  "rating": 3,
+  "borrowCount": 91,
+  "month": "12月"
+ }
+]

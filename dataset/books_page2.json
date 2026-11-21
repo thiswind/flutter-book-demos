@@ -1,0 +1,164 @@
+[
+ {
+  "id": "b07",
+  "title": "渲染管线十二讲",
+  "category": "文学小说",
+  "author": "杜文",
+  "rating": 5,
+  "borrowCount": 87,
+  "month": "7月"
+ },
+ {
+  "id": "b19",
+  "title": "布局约束之美",
+  "category": "艺术设计",
+  "author": "杜文",
+  "rating": 3,
+  "borrowCount": 14,
+  "month": "7月"
+ },
+ {
+  "id": "b31",
+  "title": "组件化的艺术",
+  "category": "历史哲学",
+  "author": "杜文",
+  "rating": 4,
+  "borrowCount": 76,
+  "month": "7月"
+ },
+ {
+  "id": "b08",
+  "title": "边城新纪",
+  "category": "文学小说",
+  "author": "Itō Takashi",
+  "rating": 5,
+  "borrowCount": 22,
+  "month": "8月"
+ },
+ {
+  "id": "b20",
+  "title": "平凡的世界",
+  "category": "艺术设计",
+  "author": "Itō Takashi",
+  "rating": 5,
+  "borrowCount": 15,
+  "month": "8月"
+ },
+ {
+  "id": "b32",
+  "title": "活着",
+  "category": "历史哲学",
+  "author": "Itō Takashi",
+  "rating": 3,
+  "borrowCount": 25,
+  "month": "8月"
+ },
+ {
+  "id": "b09",
+  "title": "选择的悖论",
+  "category": "文学小说",
+  "author": "沈云龙",
+  "rating": 3,
+  "borrowCount": 23,
+  "month": "9月"
+ },
+ {
+  "id": "b21",
+  "title": "稀缺",
+  "category": "艺术设计",
+  "author": "沈云龙",
+  "rating": 4,
+  "borrowCount": 23,
+  "month": "9月"
+ },
+ {
+  "id": "b33",
+  "title": "创新者窘境",
+  "category": "历史哲学",
+  "author": "沈云龙",
+  "rating": 4,
+  "borrowCount": 49,
+  "month": "9月"
+ },
+ {
+  "id": "b10",
+  "title": "字体与网格",
+  "category": "文学小说",
+  "author": "Pedro Alves",
+  "rating": 5,
+  "borrowCount": 77,
+  "month": "10月"
+ },
+ {
+  "id": "b22",
+  "title": "交互的未来",
+  "category": "艺术设计",
+  "author": "Pedro Alves",
+  "rating": 3,
+  "borrowCount": 12,
+  "month": "10月"
+ },
+ {
+  "id": "b34",
+  "title": "包豪斯",
+  "category": "历史哲学",
+  "author": "Pedro Alves",
+  "rating": 4,
+  "borrowCount": 58,
+  "month": "10月"
+ },
+ {
+  "id": "b11",
+  "title": "时间的形状",
+  "category": "文学小说",
+  "author": "林微因",
+  "rating": 4,
+  "borrowCount": 64,
+  "month": "11月"
+ },
+ {
+  "id": "b23",
+  "title": "元素的故事",
+  "category": "艺术设计",
+  "author": "林微因",
+  "rating": 5,
+  "borrowCount": 27,
+  "month": "11月"
+ },
+ {
+  "id": "b35",
+  "title": "进化论",
+  "category": "历史哲学",
+  "author": "林微因",
+  "rating": 5,
+  "borrowCount": 22,
+  "month": "11月"
+ },
+ {
+  "id": "b12",
+  "title": "茶马古道",
+  "category": "文学小说",
+  "author": "周树人",
+  "rating": 3,
+  "borrowCount": 87,
+  "month": "12月"
+ },
+ {
+  "id": "b24",
+  "title": "丝绸之路",
+  "category": "艺术设计",
+  "author": "周树人",
+  "rating": 3,
+  "borrowCount": 10,
+  "month": "12月"
+ },
+ {
+  "id": "b36",
+  "title": "万历十五年",
+  "category": "历史哲学",
+  "author": "周树人",
+  "rating": 3,
+  "borrowCount": 91,
+  "month": "12月"
+ }
+]
